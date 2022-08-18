@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css?ts=<?=time()?>">
 </head>
 
 <body>
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <a href="#agregado" class="modal-trigger"><button type="hidden" id="listo"></button></a>
+    <a href="#agregado" class="modal-trigger aler"><button type="hidden" id="listo"></button></a>
     <!-- Modal Agregado -->
     <div id="agregado" class="modal">
         <div class="modal-content green lighten-4">
@@ -72,11 +72,11 @@
         </div>
     </div>
 
-    <a href="#repetido" class="modal-trigger"><button type="hidden" id="adve"></button></a>
+    <a href="#repetido" class="modal-trigger aler"><button type="hidden" id="adve"></button></a>
     <!-- Modal Repetido -->
     <div id="repetido" class="modal">
         <div class="modal-content orange lighten-4">
-            <h4><i class="material-icons medium left orange-text text-darken-2">check_circle</i>Correo registrado anteriormente.</h4>
+            <h4><i class="material-icons medium left orange-text text-darken-2">priority_high</i>Este correo ya se encuentra registrado.</h4>
         </div>
         <div class="modal-footer orange lighten-4">
             <a href="#" class="btn modal-close orange darken-1">Aceptar</a>
@@ -101,29 +101,25 @@
         if($_REQUEST['conf']==1){
     ?>
             <script>
-                $(document).ready(function(){
-                    // indicamos que se ejecuta la función a los 5 segundos de haberse
-                    // cargado la pagina
-                    setTimeout(clickbutton,200);
-        
-                    function clickbutton()
-                    {
-                        // simulamos el click del mouse en el boton del modal
-                        $("#listo").click();
-                    }
-                });
+                // indicamos que se ejecuta la función a los 5 segundos de haberse
+                // cargado la pagina
+                setTimeout(clickbutton,200);
+    
+                function clickbutton()
+                {
+                    // simulamos el click del mouse en el boton del modal
+                    document.querySelector('#listo').click();
+                }
             </script>
     <?php
         }elseif($_REQUEST['conf']==0){
     ?>
             <script>
-                $(document).ready(function(){
-                    setTimeout(clickbutton,200);
-        
-                    function clickbutton(){
-                        $("#adve").click();
-                    }
-                });
+                setTimeout(clickbutton,200);
+    
+                function clickbutton(){
+                    document.querySelector('#adve').click();
+                }
             </script>
     <?php
         }
