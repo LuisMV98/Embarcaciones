@@ -25,7 +25,6 @@
         }
     }
     else{
-        print("No hay lenguajes seleccionados <br>");
         header("Location: empleados_disponibles.php?conf=0&empres=$empre&embar=$emba&opcion=$op");
     }
 
