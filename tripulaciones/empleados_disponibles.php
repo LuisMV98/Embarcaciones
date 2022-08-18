@@ -99,7 +99,7 @@
     </div>
     <br><br><br><br><br><br>
 
-    <a href="#agregado" class="modal-trigger"><button type="hidden" id="listo"></button></a>
+    <a href="#agregado" class="modal-trigger aler"><button type="hidden" id="listo"></button></a>
     <!-- Modal Agregado -->
     <div id="agregado" class="modal">
         <div class="modal-content orange lighten-4">
