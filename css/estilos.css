@@ -22,3 +22,7 @@
 .conte{
     overflow-x: auto;
 }
+
+.aler{
+	display: none;
+}

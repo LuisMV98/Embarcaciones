@@ -43,7 +43,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css?ts=<?=time()?>">
 </head>
 
 <body>
@@ -100,7 +100,7 @@
         <br><br>
     </div>
 
-    <a href="#eliminado" class="modal-trigger"><button type="hidden" id="listo"></button></a>
+    <a href="#eliminado" class="modal-trigger aler"><button type="hidden" id="listo"></button></a>
     <!-- Modal Eliminado -->
     <div id="eliminado" class="modal">
         <div class="modal-content green lighten-4">
@@ -111,7 +111,7 @@
         </div>
     </div>
 
-    <a href="#agregado" class="modal-trigger"><button type="hidden" id="listo2"></button></a>
+    <a href="#agregado" class="modal-trigger aler"><button type="hidden" id="listo2"></button></a>
     <!-- Modal Agregado -->
     <div id="agregado" class="modal">
         <div class="modal-content green lighten-4">
@@ -122,7 +122,7 @@
         </div>
     </div>
 
-    <a href="#alerta" class="modal-trigger"><button type="hidden" id="noempleados"></button></a>
+    <a href="#alerta" class="modal-trigger aler"><button type="hidden" id="noempleados"></button></a>
     <!-- Modal Alerta -->
     <div id="alerta" class="modal">
         <div class="modal-content orange lighten-4">
