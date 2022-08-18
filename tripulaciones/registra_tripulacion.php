@@ -12,7 +12,7 @@
         $listaE = $_REQUEST['le'];
 
         for($i=0; $i<$contador; $i++){
-            print("<span style=margin-left:30px;>[<strong>" . $listaE[$i] . "</strong>]</span> <br>");
+            //print("<span style=margin-left:30px;>[<strong>" . $listaE[$i] . "</strong>]</span> <br>");
             $query = "INSERT INTO tripulaciones VALUES (NULL, '$emba', '$listaE[$i]')";
             mysqli_query($link,$query);
             $query = "UPDATE empleados SET tripulacion='$emba' WHERE idEmpleado='$listaE[$i]'";
