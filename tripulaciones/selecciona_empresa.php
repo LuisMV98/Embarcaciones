@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selección</title>
+    <title>Selecci贸n</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
 
     <!--Import Google Icon Font-->
@@ -43,7 +43,7 @@
                         <div class="form-field">
                             <label for="empresa"><i class="material-icons left">business</i>Empresa</label>
                             <select class="form-control" name="emp" id="emp" class="validate" required>
-                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="" disabled selected>Selecciona una opci贸n...</option>
                             <?php
                                 include('../sesiones/conexion.php');
                                 $link = Conectar();
@@ -67,18 +67,18 @@
         </div>
     </div>
 
-    <a href="#agregado" class="modal-trigger"><button type="hidden" id="listo"></button></a>
+    <a href="#agregado" class="modal-trigger aler"><button type="hidden" id="listo"></button></a>
     <!-- Modal Agregado -->
     <div id="agregado" class="modal">
         <div class="modal-content green lighten-4">
-            <h4><i class="material-icons medium left green-text text-darken-2">check_circle</i>Nueva tripulación agregada.</h4>
+            <h4><i class="material-icons medium left green-text text-darken-2">check_circle</i>Nueva tripulaci贸n agregada.</h4>
         </div>
         <div class="modal-footer green lighten-4">
             <a href="#" class="btn modal-close green darken-1">Aceptar</a>
         </div>
     </div>
 
-    <a href="#alerta" class="modal-trigger"><button type="hidden" id="noempleados"></button></a>
+    <a href="#alerta" class="modal-trigger aler"><button type="hidden" id="noempleados"></button></a>
     <!-- Modal Agregado -->
     <div id="alerta" class="modal">
         <div class="modal-content orange lighten-4">
