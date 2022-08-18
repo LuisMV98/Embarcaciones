@@ -17,6 +17,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="../css/estilos.css?ts=<?=time()?>">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 
 <body>
@@ -101,25 +102,29 @@
         if($_REQUEST['conf']==1){
     ?>
             <script>
-                // indicamos que se ejecuta la función a los 5 segundos de haberse
-                // cargado la pagina
-                setTimeout(clickbutton,200);
-    
-                function clickbutton()
-                {
-                    // simulamos el click del mouse en el boton del modal
-                    document.querySelector('#listo').click();
-                }
+                $(document).ready(function(){
+                    // indicamos que se ejecuta la función a los 5 segundos de haberse
+                    // cargado la pagina
+                    setTimeout(clickbutton,200);
+        
+                    function clickbutton()
+                    {
+                        // simulamos el click del mouse en el boton del modal
+                        $("#listo").click();
+                    }
+                });
             </script>
     <?php
         }elseif($_REQUEST['conf']==0){
     ?>
             <script>
-                setTimeout(clickbutton,200);
-    
-                function clickbutton(){
-                    document.querySelector('#adve').click();
-                }
+                $(document).ready(function(){
+                    setTimeout(clickbutton,200);
+        
+                    function clickbutton(){
+                        $("#adve").click();
+                    }
+                });
             </script>
     <?php
         }
