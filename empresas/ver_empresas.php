@@ -31,10 +31,9 @@
     <!-- Contenido -->
     <?php
         include('../sesiones/conexion.php');
-        $link = Conectar();
 
         $query   = ("SELECT * FROM empresas ORDER BY nombre");
-        $consulta = mysqli_query($link, $query);
+        $consulta = $mysqli->query($query);
         $cantidad = mysqli_num_rows($consulta);
     ?>
 
@@ -55,7 +54,7 @@
                                 <p><b>Correo:&nbsp;</b><?php echo $dataEmpresa['correo']; ?></p>
                                 <p><b>teléfono:&nbsp;</b><?php echo $dataEmpresa['telefono']; ?></p>
                                 <p><b>Logo:&nbsp;</b></p>
-                                <div class="center"><img src="<?php echo $dataEmpresa['logo']; ?>" class="logo" ></div>
+                                <div class="center"><img src="<?php echo $dataEmpresa['logo']; ?>?ts=<?=time()?>" class="logo" ></div>
                                 </h6>
                             </div>
                             <div class="card-action">

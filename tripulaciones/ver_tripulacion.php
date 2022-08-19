@@ -8,20 +8,19 @@
     $emba = $_REQUEST['embar'];
 
     include('../sesiones/conexion.php');
-    $link = Conectar();
 
     $query   = ("SELECT nombre FROM empresas  WHERE idEmpresa= '".$empre."' ");
-    $consulta = mysqli_query($link, $query);
+    $consulta = $mysqli->query($query);
     $dataEmpresa = mysqli_fetch_array($consulta);
     $empresa = $dataEmpresa['nombre'];
 
     $query   = ("SELECT nombre FROM embarcaciones  WHERE idEmbarcacion= '".$emba."' ");
-    $consulta = mysqli_query($link, $query);
+    $consulta = $mysqli->query($query);
     $dataEmbarcacion = mysqli_fetch_array($consulta);
     $embarcacion = $dataEmbarcacion['nombre'];
 
     $query   = ("SELECT * FROM empleados WHERE empresa= $empre AND tripulacion=$emba ORDER BY nombre");
-    $consulta = mysqli_query($link, $query);
+    $consulta = $mysqli->query($query);
     $cantidad = mysqli_num_rows($consulta);
 
     if($cantidad==0){

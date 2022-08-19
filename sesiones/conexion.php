@@ -1,38 +1,12 @@
 <?php
-	
-	function Conectar()
-	{
-	
-		$servername = 'localhost';
-		$database = 'embarcaciones';
-		$username = 'root';
-		$password = '';
+	$mysqli = new mysqli("localhost", "root", "", "embarcaciones"); 
+                        //localhost,usuario,password,basedatos
 
-		// Crear conexion
-
-		if (!($conn = mysqli_connect($servername, $username, $password)))
-		{
-			//print("Error al conectarse a la Base de datos. <br>");
-			exit();
-		}
-		else
-		{
-			//print("Conexion exitosa. <br>");
-		}
-
-		//Conexion a la Base de Datos
-
-		if (!mysqli_select_db($conn, $database))
-		{
-			//print("Error al seleccionar la base de datos. <br>");
-			exit();
-		}
-		else
-		{
-			//print("Conexion exitosa a la base de datos [$database]. <br>");
-		}
-
-		return $conn;
-
-	}
+    if ($mysqli->connect_errno) {
+         //echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+    else{
+        //echo "si se hizo la conexion <br>";
+        //echo $mysqli->host_info . "\n";
+    }
 ?>

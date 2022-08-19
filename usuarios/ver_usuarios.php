@@ -31,10 +31,9 @@
     <!-- Contenido -->
     <?php
         include('../sesiones/conexion.php');
-        $link = Conectar();
 
         $query   = ("SELECT * FROM usuarios ORDER BY nombre");
-        $consulta = mysqli_query($link, $query);
+        $consulta = $mysqli->query($query);
         $cantidad = mysqli_num_rows($consulta);
     ?>
 

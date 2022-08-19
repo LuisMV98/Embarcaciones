@@ -1,6 +1,5 @@
 <?php
 	include("../sesiones/conexion.php");
-	$link = Conectar();
 
     $empre = $_REQUEST['empres'];
     $emba = $_REQUEST['embarc'];
@@ -14,9 +13,9 @@
         for($i=0; $i<$contador; $i++){
             //print("<span style=margin-left:30px;>[<strong>" . $listaE[$i] . "</strong>]</span> <br>");
             $query = "INSERT INTO tripulaciones VALUES (NULL, '$emba', '$listaE[$i]')";
-            mysqli_query($link,$query);
+            $mysqli->query($query);
             $query = "UPDATE empleados SET tripulacion='$emba' WHERE idEmpleado='$listaE[$i]'";
-            mysqli_query($link, $query);
+            $mysqli->query($query);
             if($op==1){
                 header("Location: selecciona_empresa.php?conf=1&opcion=1");
             }elseif($op==2){

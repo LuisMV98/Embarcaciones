@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selecci贸n</title>
+    <title>Selección</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
 
     <!--Import Google Icon Font-->
@@ -43,12 +43,12 @@
                         <div class="form-field">
                             <label for="empresa"><i class="material-icons left">business</i>Empresa</label>
                             <select class="form-control" name="emp" id="emp" class="validate" required>
-                                <option value="" disabled selected>Selecciona una opci贸n...</option>
+                                <option value="" disabled selected>Selecciona una opción...</option>
                             <?php
                                 include('../sesiones/conexion.php');
-                                $link = Conectar();
+                                
                                 $query   = ("SELECT * FROM empresas WHERE embarcaciones<>0 AND empleados<>0 ORDER BY nombre");
-                                $consulta = mysqli_query($link, $query);
+                                $consulta = $mysqli->query($query);
                                 
                                 while ($dataEmpresa = mysqli_fetch_array($consulta)){
                                     ?>
@@ -71,7 +71,7 @@
     <!-- Modal Agregado -->
     <div id="agregado" class="modal">
         <div class="modal-content green lighten-4">
-            <h4><i class="material-icons medium left green-text text-darken-2">check_circle</i>Nueva tripulaci贸n agregada.</h4>
+            <h4><i class="material-icons medium left green-text text-darken-2">check_circle</i>Nueva tripulación agregada.</h4>
         </div>
         <div class="modal-footer green lighten-4">
             <a href="#" class="btn modal-close green darken-1">Aceptar</a>

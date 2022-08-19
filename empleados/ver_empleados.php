@@ -32,15 +32,14 @@
     <!-- Contenido -->
     <?php
         include('../sesiones/conexion.php');
-        $link = Conectar();
 
         $query   = ("SELECT nombre FROM empresas  WHERE idEmpresa= '".$empre."' ");
-        $consulta = mysqli_query($link, $query);
+        $consulta = $mysqli->query($query);
         $dataEmpresa = mysqli_fetch_array($consulta);
         $emperesa = $dataEmpresa['nombre'];
 
         $query   = ("SELECT * FROM empleados  WHERE empresa= '".$empre."' ORDER BY nombre");
-        $consulta = mysqli_query($link, $query);
+        $consulta = $mysqli->query($query);
         $cantidad = mysqli_num_rows($consulta);
     ?>
 

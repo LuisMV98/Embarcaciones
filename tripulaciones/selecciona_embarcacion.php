@@ -5,10 +5,9 @@
     $op = $_REQUEST['opcion'];
     
     include('../sesiones/conexion.php');
-    $link = Conectar();
 
     $query   = ("SELECT * FROM empleados  WHERE empresa= $empre  AND tripulacion is NULL");
-    $consulta = mysqli_query($link, $query);
+    $consulta = $mysqli->query($query);
     $cantidad = mysqli_num_rows($consulta);
 
     if($cantidad==0){
@@ -68,7 +67,7 @@
                                 $idEmp= $_REQUEST['emp'];
 
                                 $query   = ("SELECT * FROM embarcaciones WHERE empresa= '".$idEmp."' ORDER BY nombre");
-                                $consulta = mysqli_query($link, $query);
+                                $consulta = $mysqli->query($query);
                                 
                                 while ($dataEmbarcacion = mysqli_fetch_array($consulta)){
                                     ?>

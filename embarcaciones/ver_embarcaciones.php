@@ -32,15 +32,14 @@
     <!-- Contenido -->
     <?php
         include('../sesiones/conexion.php');
-        $link = Conectar();
 
         $query   = ("SELECT nombre FROM empresas  WHERE idEmpresa= '".$empre."' ");
-        $consulta = mysqli_query($link, $query);
+        $consulta = $mysqli->query($query);
         $dataEmpresa = mysqli_fetch_array($consulta);
         $empresa = $dataEmpresa['nombre'];
 
         $query   = ("SELECT * FROM embarcaciones  WHERE empresa= '".$empre."' ORDER BY nombre");
-        $consulta = mysqli_query($link, $query);
+        $consulta = $mysqli->query($query);
         $cantidad = mysqli_num_rows($consulta);
     ?>
 
@@ -90,7 +89,7 @@
         </div>
     </div>
 
-    <a href="#agregado" class="modal-trigger"><button type="hidden" id="listo"></button></a>
+    <a href="#agregado" class="modal-trigger aler"><button type="hidden" id="listo"></button></a>
     <!-- Modal Agregado -->
     <div id="agregado" class="modal">
         <div class="modal-content green lighten-4">
