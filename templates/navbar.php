@@ -107,9 +107,9 @@
     <li><a href="../embarcaciones/selecciona_empresa.php">Ver embarcaciones</a></li>
     </ul>
     <ul id="tripulaciones2" class="dropdown-content">
-    <li><a href="../tripulaciones/selecciona_empresa.php">Agregar tripulación</a></li>
+    <li><a href="../tripulaciones/selecciona_empresa.php?opcion=1">Agregar tripulación</a></li>
     <li class="divider"></li>
-    <li><a href="../tripulaciones/selecciona_empresa_ver.php">Ver tripulacion</a></li>
+    <li><a href="../tripulaciones/selecciona_empresa.php?opcion=2">Ver tripulacion</a></li>
     </ul>
     <ul id="usuarios2" class="dropdown-content">
     <li><a href="../usuarios/agregar_usuario.php">Agregar usuario</a></li>
