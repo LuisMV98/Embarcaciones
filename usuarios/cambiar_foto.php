@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	include("../sesiones/conexion.php");
-	$link = Conectar();
     
     $idUs = $_SESSION['idus'];
 
@@ -13,7 +12,7 @@
 
         if(move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta.$idUs.".jpg")){
             $query = "UPDATE usuarios SET foto='$nombrecomp' WHERE idUsuario='$idUs'";
-            mysqli_query($link, $query);
+            $mysqli->query($query);
             header("Location: inicio.php");
         }else{
             header("Location: inicio.php");
